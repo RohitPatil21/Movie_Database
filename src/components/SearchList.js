@@ -8,7 +8,7 @@ const SearchList = () => {
 
 
     const fetchData = async () => {
-        const res = await fetch('http://www.omdbapi.com/?i=tt3896198&apikey=aaf156a4&s=hera%20pheri');
+        const res = await fetch('http://www.omdbapi.com/?i=tt3896198&apikey=aaf156a4&s=avengers');
         const data = await res.json();
         setMovies(data.Search);
     }
