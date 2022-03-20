@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import Container from '@mui/material/Container';
+import Header from './components/Header.js';
+import SearchList from './components/SearchList';
+import { Route, Routes } from 'react-router-dom';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Detail from './routes/Detail.js';
+import NotFound from './routes/NotFound';
+import Home from './routes/Home.js';
+import Search from './routes/Search.js';
+
+
+
+const App = () => {
+
+	return (
+		<div className="App">
+			<Header />
+
+			<Routes>
+				<Route path="/"  element={<Home />}  /> 
+				<Route path="search" element={<Search />} /> 
+				<Route path="/detail" element={<Detail />} /> 
+				<Route path="*" element={<NotFound />} /> 
+			</Routes>
+
+		</div>
+	);
 }
 
 export default App;
