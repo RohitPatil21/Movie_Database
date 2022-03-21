@@ -20,7 +20,7 @@ const Detail = () => {
  	const [details, setDetails] = useState({});
 	
 	const fetchFn = async() => {
-		const res = await fetch(`http://www.omdbapi.com/?i=${id}&plot=full&apiKey=aaf156a4`);
+		const res = await fetch(`https://www.omdbapi.com/?i=${id}&plot=full&apiKey=aaf156a4`);
 		const data = await res.json();
 		data.actors_arr = data.Actors.split(", ");
 		setDetails(data);
