@@ -14,8 +14,6 @@ import Rating from '@mui/material/Rating';
 
 
 const Detail = () => {
-	const params = useParams();
-	console.log(params);
 
 	return (
 		<div>
