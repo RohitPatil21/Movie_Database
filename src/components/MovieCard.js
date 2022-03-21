@@ -16,7 +16,7 @@ export default function MovieCard(props) {
 
         <Card sx={{ maxWidth: 345 }}>
             <CardActionArea>
-                <Link to="/detail">
+                <Link to={ `/detail/${props.data?.imdbID}` }>
                 <CardMedia
                     component="img"
                     height="300"
