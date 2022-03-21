@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Container from '@mui/material/Container'
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
-import { Link as RouterLink } from 'react-router-dom';
+import { Link as RouterLink, useParams } from 'react-router-dom';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Chip from '@mui/material/Chip';
@@ -14,6 +14,9 @@ import Rating from '@mui/material/Rating';
 
 
 const Detail = () => {
+	const params = useParams();
+	console.log(params);
+
 	return (
 		<div>
 
@@ -33,7 +36,7 @@ const Detail = () => {
 
 					<Grid item xs={4}>
 						<Stack spacing={2}>
-							<img src="https://m.media-amazon.com/images/M/MV5BMWRhNGY3NGQtMDAxMS00YjY2LTgzOTUtZjljZmUyYWQwMGI2XkEyXkFqcGdeQXVyMDM2NDM2MQ@@._V1_SX300.jpg" />
+							<img src="https://m.media-amazon.com/images/M/MV5BMjMxNjY2MDU1OV5BMl5BanBnXkFtZTgwNzY1MTUwNTM@._V1_SX300.jpg" />
 							<Typography component="legend" variant="h5">Rating</Typography>
 							<Rating name="read-only" value={4} readOnly />
 						</Stack>
@@ -41,7 +44,7 @@ const Detail = () => {
 
 					<Grid item xs={8} sx={{ ml: 4 }} >
 						<Stack spacing={2}>
-							<Typography variant='h4' gutterBottom component="div"> The Social Network </Typography>
+							<Typography variant='h4' gutterBottom component="div"> Avengers </Typography>
 
 							<Stack direction="row" spacing={2}>
 								<Chip label="Movie" />
